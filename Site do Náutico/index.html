@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clube Náutico Capibaribe</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style> 
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  *{
+    font-family: Roboto, sans-serif;
+  }
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #FF0000;
+    color: #FFF;
+    padding: 1% 0;
+    font-size: 1.9em;
+    border: 0;
+    min-height:150px;
+  }
+  .navbar-brand{
+    float: left;
+    padding: 0px 15px 10px;
+  }
+  .navbar-brand img{
+    max-height: 100px;
+    width: auto;
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color: #FFF;
+    background: #FF0000;
+    min-height: auto;
+  }
+  .navbar-inverse .navbar-nav li a {
+    color: #D5D5D5;
+  }
+  .item img {
+    min-width: 100%;
+  }
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px black;
+  }
+  .btn {
+    font-size: 18px;
+    color: #FFF;
+    padding: 12px 22px;
+    background: #FF0000;
+    border: 2px solid #FFF;
+  }
+  .container{
+    color: #FF0000;
+    margin: 4% auto;
+    font-weight: bold;
+  }
+  .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: red;
+}
+  .overlay:hover{
+    opacity: 0.8;
+  }
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+  #icon {
+    max-width: 200px;
+    margin: 1% auto;
+    font-weight: bold;
+  }
+  footer{
+    width: 100%;
+    background-color: #FF0000;
+    padding: 5%;
+    color: #FFF;
+  }
+  .fa {
+    padding: 25pxpx;
+    font-size: 30px;
+    color: white;
+  }
+  .fa:hover{
+    color:#D5D5D5;
+    text-decoration: none;
+  }
+  @media (max-width: 900px){
+    .fa{
+      font-size:20px;
+      padding: 10px;
+    }
+  }
+  @media (max-width: 600px){
+    .carousel-caption{
+      display: none;
+    }
+    #icon{
+      max-width: 150px;
+    }
+    h4{
+      font-size: 1.9em;
+    }
+  }
+	html {
+		scroll-behavior: smooth;
+	}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/nautico-logo-escudo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#Escudos">Escudos</a></li>
+              <li><a href="#HinoDoClube">Hino</a></li>
+              <li><a href="#Titulos">Titulos</a></li>
+              <li><a href="#Estádio">Estádio</a></li>
+              <li><a href="#Contato">Contato</a></li>
+            </ul>
+        </div>
+        </div>
+  </nav>
+  <div id ="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1" ></li>
+      <li data-target="#myCarousel" data-slide-to="2" ></li>
+    </ol> 
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/seriec.jpg">
+        <div class="carousel-caption">
+          <h1>seja sócio do maior de pernambuco</h1>
+          <br>
+          <button type="button" class="btn btn-default"><a  href="https://socio-nautico.futebolcard.com/">Associe-se</a></button>
+        </div>
+      </div> <!-- End Active-->
+      <div class="item">
+        <img src="img/torcida.jpg">
+      </div>
+      <div class="item">
+          <img src="img/aflitos.jpg">
+        </div>
+    </div>
+    <!--Start Slider Controls-->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div> <!-- End Slider-->
+  <div class="container text-center" id="Escudos">
+    <h2>Evolução dos Escudos</h2>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <img src="img/1901-1931.jpg" id="icon">
+        <h4>1901-1931</h4>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="img/1931-1969.jpg" id="icon">
+          <h4>1931-1969</h4>
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="img/1969-1995.jpg" id="icon">
+          <h4>1969-1995</h4>
+        </div>
+      <div class="col-lg-4 col-sm-6">
+          <img src="img/1995-2008.jpg" id="icon">
+          <h4>1995-2008</h4>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+            <img src="img/2008.jpg" id="icon">
+            <h4>2008</h4>
+          </div>
+    </div>
+  </div>
+
+  <div class="container text-center" id="HinoDoClube">
+      <h2>Hino do Clube Náutico Capibaribe</h2>
+    <div class="row">
+      <div class="col-md-6">
+          <p>
+              Da união de duas cores mágicas </br>
+              Nasceu a força e a raça</br>
+              Vermelho de luta</br>
+              Branco de paz</br>
+              Quem olha não esquece jamais</br>
+              Da união de sete letras mágicas</br>
+            </br>
+              N-A-U-T-I-C-O</br>
+            </br>
+              Nasceu um time que encanta</br>
+              Que manda e desmanda</br>
+              Que faz o nosso Carnaval</br>
+              
+              Náutico teu caminho é de luz</br>
+              Tua força, tua garra</br>
+              Fascina e seduz</br>
+              No meu coração</br>
+              Brotou o esplendor</br>
+              De te adorar com emoção</br>
+              No meu coração</br>
+              Brotou o esplendor</br>
+              De te adorar com muito amor</br>
+              
+              Lá, lá, lá, lá, lá, lá, lá, lá, lá, lá</br>
+              Lá, lá, lá, lá, lá, lá, lá, lá, lá, lá</br>
+              
+              No meu coração</br>
+              Brotou o esplendor</br>
+              De te adorar com emoção</br>
+              No meu coração</br>
+              Brotou o esplendor</br>
+              De te adorar com muito amor</br>
+          </p>
+      </div>
+      <div class="col-md-6">
+          <iframe width="550" height="400" src="https://www.youtube.com/embed/F1o9TU4tH-w" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+  </div>
+  <div class="container text-center" id="Titulos">
+      <h2>Principais Títulos</h2>
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/seriec.png" id="icon">
+            <div class="overlay">
+                <div class="text">Série C</div>
+            </div>
+            <h4>2019</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/taçabrasil.png" id="icon">
+            <div class="overlay">
+                <div class="text">Zona Norte-Nordeste
+                  da Taça Brasil
+                </div>
+            </div>
+            <h4>1967</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/taçabrasil.png" id="icon">
+            <div class="overlay"><div class="text">Zona Norte-Nordeste
+                da Taça Brasil
+              </div></div>
+            
+            <h4>1966</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/taçabrasil.png" id="icon">
+            <div class="overlay"><div class="text">Zona Norte-Nordeste
+                da Taça Brasil
+              </div></div>
+            
+            <h4>1965</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/nortenordeste.png" id="icon">
+            <div class="overlay"><div class="text">Torneio dos Campeões do Norte-Nordeste
+              </div></div>
+            
+            <h4>1952</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/norte.png" id="icon">
+            <div class="overlay"><div class="text">Copa dos Campeões do Norte
+              </div></div>
+            
+            <h4>1966</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>2018</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+          
+            <h4>2004</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>2002</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>2001</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1989</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1985</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1984</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1974</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1968</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1967</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1966</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1965</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1964</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1963</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+    
+            <h4>1960</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1960</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1954</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1952</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1951</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1950</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1945</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+            
+            <h4>1939</h4>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6 col-sx-1">
+            <img src="img/pernambucano.png" id="icon">
+            <div class="overlay"><div class="text">Campeonato Pernambucano (22 Estaduais)
+              </div></div>
+        
+            <h4>1934</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="Estádio">
+      <h2>Estádio</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p>
+              O Estádio Eládio de Barros Carvalho, popularmente conhecido como Estádio dos Aflitos, por estar localizado no bairro dos Aflitos, é o estádio usado pelo Clube Náutico Capibaribe. 
+              O estádio foi inaugurado em 25 de junho de 1939 e o seu nome é uma homenagem a Eládio de Barros Carvalho, que foi presidente do Náutico por 2 ocasiões (1948-54 e 1957-63).
+          </p>
+        </div>
+        <div class="col-lg-6">
+            <img src="img/estadiodosaflitos2.jpeg">
+            <h4>Estádio dos Aflitos</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+        <h4><a href="#hidden" data-toggle="collapse">Deseja saber mais sobre o Clube Náutico Capibaribe?</a></h2>
+          <div id="hidden" class="collapse">
+            <p>
+                Clube Náutico Capibaribe, comumente conhecido apenas por Náutico, 
+                é um clube desportivo brasileiro sediado na cidade do Recife, no estado de Pernambuco.
+            </p>
+            <p>
+                Fundado por dois grupos de remadores recifenses em 1898 como Clube Náutico do Recife, 
+                tem como data de fundação oficial 7 de abril de 1901 e teve seu primeiro time de futebol em 1905,
+                 formado por ingleses e alemães, sendo um dos clubes mais antigos da Região Nordeste do Brasil, 
+                 é o mais antigo do seu estado, 
+                 contando com estruturas como o Centro de Treinamento Wilson Campos para a realização de suas atividades.
+                  É detentor da terceira maior torcida de Pernambuco e a sexta maior do Nordeste, 
+                  e não obstante as suas origens burguesas, com os títulos conquistados a partir dos anos 1960, 
+                  considerada a década de ouro do clube, 
+                  o Náutico começou a receber adesão cada vez maior de classes populares do Recife e do estado, 
+                  tendo hoje uma torcida popular, diversificada socialmente.
+
+            </p>
+            <p>
+                O Náutico é proprietário do Estádio Eládio de Barros Carvalho, mais conhecido como Estádio dos Aflitos, 
+                por localizar-se no bairro dos Aflitos. 
+                A capacidade da praça de esportes atualmente é de pouco mais de 16 mil espectadores sentados. 
+                Também lhe pertence o Centro de Treinamento Wilson Campos — o maior do Norte-Nordeste do país —, 
+                situado no bairro da Guabiraba, 
+                no Recife, que possui 54 hectares de área construída e conta com cinco campos oficiais e dois campos 
+                de futebol de dimensão reduzidas.
+
+            </p>
+            <p>
+                A nível nacional, foi campeão do Campeonato Brasileiro da Série C de 2019. 
+                Também foi vice-campeão do Campeonato Brasileiro de 1967, e semifinalista em 1961, 1965, 1966 e 1968. 
+                Foi um dos dois representantes do Brasil na Copa Libertadores da América de 1968, junto com o Palmeiras. 
+                O Náutico foi campeão do Torneio dos Campeões do Norte-Nordeste em 1952, da Copa dos Campeões do Norte em 1966, e detém 22 títulos de campeão estadual, 
+                o primeiro conquistado em 1934 e o mais recente em 2018, tendo conquistado, em 1951, 
+                o título de campeão no seu cinquentenário e, em 2001, o de campeão no ano do seu centenário, 
+                e conquistou o hexacampeonato pernambucano consecutivo, feito único em seu estado (1963, 1964, 1965, 1966, 1967 e 1968). 
+                m Pernambuco, foi o primeiro clube a disputar uma final de Campeonato Brasileiro e a disputar a principal competição do continente, a Copa Libertadores da América. 
+                Em cinco oportunidades terminou o Campeonato Brasileiro entre os quatro primeiros colocados, sendo este o recorde entre os times do Norte-Nordeste, ao lado do Bahia.
+            </p>
+            <p>
+                Suas cores, presentes no escudo e bandeira oficial, são o vermelho e branco, enquanto que seus torcedores são conhecidos como alvirrubros.
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center" id="Contato">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Contate-nos</h3>
+          <br>
+          <h4>Nossos endereços e informações de contato aqui</h4>
+        </div>
+        <div class="col-sm-4">
+          <h3>Conecte-se</h3>
+          <a href="https://www.facebook.com/nauticope/" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/nauticope" class="fa fa-twitter"></a>
+          <a href="https://www.instagram.com/nauticope" class="fa fa-instagram"></a>
+          <a href="https://www.youtube.com/channel/UCFnL-aA5QFVGCSZEI0OJh-w" class="fa fa-youtube"></a>
+        </div>
+        <div class="col-sm-4">
+          <img src="img/nautico.png" class="icon">
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
